@@ -1,3 +1,87 @@
 <resources>
     <string name="app_name">Meal Master</string>
+    <string name="cookbook">Cookbook</string>
+    <string-array name="measurement_units_array">
+        <item>Each</item>
+        <item>Ounces</item>
+        <item>Pounds</item>
+        <item>Cups</item>
+        <item>Teaspoons</item>
+        <item>Tablespoons</item>
+        <item>Grams</item>
+        <item>Pieces</item>
+    </string-array>
+    <string-array name="food_group">
+        <item>Dairy</item>
+        <item>Fruit</item>
+        <item>Grain</item>
+        <item>Meats/Fish</item>
+        <item>Vegetables</item>
+        <item>Frozen</item>
+        <item>Breakfast/Snacks</item>
+        <item>Baked Goods</item>
+        <item>Pasta</item>
+        <item>Sauces/Oils</item>
+        <item>Condiments</item>
+        <item>Dry/Spices/Herbs</item>
+        <item>Drinks</item>
+    </string-array>
+    <string-array name="fractions">
+        <item>ex. 1/2</item>
+        <item>1/2</item>
+        <item>1/3</item>
+        <item>2/3</item>
+        <item>1/4</item>
+        <item>3/4</item>
+        <item>1/8</item>
+        <item>1/16</item>
+    </string-array>
+    <string-array name="recipeType">
+        <item>Recipe Type</item>
+        <item>Breakfast</item>
+        <item>Brunch</item>
+        <item>Lunch</item>
+        <item>Dinner</item>
+        <item>Dessert</item>
+        <item>Snack</item>
+        <item>Beverage</item>
+        <item>Appetizer</item>
+        <item>Add New Tag</item>
+    </string-array>
+    <string-array name="recipeType2">
+        <item>Secondary Recipe Type</item>
+        <item>Breakfast</item>
+        <item>Brunch</item>
+        <item>Lunch</item>
+        <item>Dinner</item>
+        <item>Dessert</item>
+        <item>Snack</item>
+        <item>Beverage</item>
+        <item>Appetizer</item>
+        <item>Add New Tag</item>
+    </string-array>
+    <string-array name="recipeTags">
+        <item>Tag 1</item>
+        <item>Weight Watchers</item>
+        <item>High Protein</item>
+        <item>Cheap</item>
+        <item>Few Ingredients</item>
+        <item>Holiday</item>
+        <item>Canning</item>
+        <item>Crockpot</item>
+        <item>Preassure Cooker</item>
+        <item>Add New Tag</item>
+    </string-array>
+    <string-array name="recipeTags2">
+        <item>Tag 2</item>
+        <item>Weight Watchers</item>
+        <item>High Protein</item>
+        <item>Cheap</item>
+        <item>Few Ingredients</item>
+        <item>Holiday</item>
+        <item>Canning</item>
+        <item>Crockpot</item>
+        <item>Pressure Cooker</item>
+        <item>Add New Tag</item>
+    </string-array>
 </resources>

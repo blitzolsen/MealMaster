@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/cooking_background3"
+    tools:context=".EnterFoodToInventory">
+
+    <TextView
+        android:id="@+id/foodHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Please Enter A Food"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/foodName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:hint="Food Name"
+        android:inputType="textCapWords"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/foodHeader" />
+
+    <EditText
+        android:id="@+id/amountOfFOODACTIVITY"
+        android:layout_width="149dp"
+        android:layout_height="43dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="Amout of"
+        android:inputType="number"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/foodName" />
+
+    <Button
+        android:id="@+id/addAnotherFood"
+        android:layout_width="0dp"
+        android:layout_height="57dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="32dp"
+        android:background="@color/colorAccent"
+        android:onClick="addAnotherFood"
+        android:text="Enter and Add Another"
+        app:layout_constraintBottom_toTopOf="@+id/goToFoodInventoryActivity"
+        app:layout_constraintEnd_toStartOf="@+id/addToInBtn"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Spinner
+        android:id="@+id/meassurementUnitsFOODACTIVITY"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:entries="@array/measurement_units_array"
+        app:layout_constraintEnd_toStartOf="@+id/foodGroupFOODACTIVITY"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/amountOfFOODACTIVITY" />
+
+    <Spinner
+        android:id="@+id/foodGroupFOODACTIVITY"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginStart="16dp"
+        android:entries="@array/food_group"
+        app:layout_constraintBaseline_toBaselineOf="@+id/meassurementUnitsFOODACTIVITY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/meassurementUnitsFOODACTIVITY" />
+
+    <Button
+        android:id="@+id/goToFoodInventoryActivity"
+        android:layout_width="0dp"
+        android:layout_height="57dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginStart="32dp"
+        android:background="@color/colorAccent"
+        android:onClick="goToInventory"
+        android:text="Go to Inventory"
+        app:layout_constraintBottom_toTopOf="@+id/goToMainPage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="29dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:text="and"
+        app:layout_constraintBaseline_toBaselineOf="@+id/amountOfFOODACTIVITY"
+        app:layout_constraintStart_toEndOf="@+id/amountOfFOODACTIVITY" />
+
+    <Spinner
+        android:id="@+id/fractionSpinnerFOODACTIVITY"
+        android:layout_width="0dp"
+        android:layout_height="43dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginStart="8dp"
+        android:entries="@array/fractions"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/goToMainPage"
+        android:layout_width="0dp"
+        android:layout_height="57dp"
+        android:layout_marginBottom="50dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginStart="32dp"
+        android:background="@color/colorAccent"
+        android:onClick="goToMainPage"
+        android:text="Main page"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/addToInBtn"
+        android:layout_width="0dp"
+        android:layout_height="57dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginStart="8dp"
+        android:background="@color/colorAccent"
+        android:onClick="addToInventory"
+        android:text="Add to Inventory"
+        app:layout_constraintBottom_toTopOf="@+id/goToFoodInventoryActivity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/addAnotherFood" />
+
+</android.support.constraint.ConstraintLayout>

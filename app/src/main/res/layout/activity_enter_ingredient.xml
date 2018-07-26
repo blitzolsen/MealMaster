@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/cooking_background3"
+    tools:context=".EnterIngredient">
+
+    <TextView
+        android:id="@+id/selectYourRecipesTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Please Enter An Ingredient"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/ingredientName"
+        android:layout_width="wrap_content"
+        android:layout_height="54dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="Ingredient Name"
+        android:inputType="textCapWords"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recipeNameIngredientAc" />
+
+    <EditText
+        android:id="@+id/amountOf"
+        android:layout_width="149dp"
+        android:layout_height="53dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="Amout of"
+        android:inputType="number"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ingredientName" />
+
+    <Button
+        android:id="@+id/nextFoodItemScreen"
+        android:layout_width="0dp"
+        android:layout_height="57dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginStart="32dp"
+        android:background="@color/colorAccent"
+        android:onClick="addAnotherIngredient"
+        android:text="Add Another"
+        app:layout_constraintBottom_toTopOf="@+id/addRecipeInstructionsActivity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Spinner
+        android:id="@+id/meassurementUnits"
+        android:layout_width="0dp"
+        android:layout_height="43dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:entries="@array/measurement_units_array"
+        app:layout_constraintBottom_toTopOf="@+id/nextFoodItemScreen"
+        app:layout_constraintEnd_toStartOf="@+id/foodGroup"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/amountOf" />
+
+    <Spinner
+        android:id="@+id/foodGroup"
+        android:layout_width="0dp"
+        android:layout_height="43dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginStart="16dp"
+        android:entries="@array/food_group"
+        app:layout_constraintBaseline_toBaselineOf="@+id/meassurementUnits"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/meassurementUnits" />
+
+    <TextView
+        android:id="@+id/recipeNameIngredientAc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="TextView"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/selectYourRecipesTextView" />
+
+    <Button
+        android:id="@+id/addRecipeInstructionsActivity"
+        android:layout_width="0dp"
+        android:layout_height="57dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginStart="32dp"
+        android:background="@color/colorAccent"
+        android:onClick="sendIntentAddRecipeInstructions"
+        android:text="Add Recipe Instructions"
+        app:layout_constraintBottom_toTopOf="@+id/goToMainPage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="29dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:text="and"
+        app:layout_constraintBaseline_toBaselineOf="@+id/amountOf"
+        app:layout_constraintStart_toEndOf="@+id/amountOf" />
+
+    <Spinner
+        android:id="@+id/fractionSpinner"
+        android:layout_width="0dp"
+        android:layout_height="53dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginStart="8dp"
+        android:entries="@array/fractions"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/goToMainPage"
+        android:layout_width="0dp"
+        android:layout_height="57dp"
+        android:layout_marginBottom="50dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginStart="32dp"
+        android:background="@color/colorAccent"
+        android:onClick="goToMainPage"
+        android:text="Main page"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
